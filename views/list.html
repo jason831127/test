@@ -1,0 +1,30 @@
+   <h1>Account - List</h1>
+   <!-- <body>
+   <input type="button" value=count /><br / >
+   </body> -->
+    <%=count %>
+    <table>
+        <tr>
+            <th>登陸時間</th>
+            <th>IP</th>
+            <th>USER aget</th>
+        </tr>
+        <% for ( var i = 0 ; i < data.length ; i++){ %>
+            <tr>
+                <td>
+                    <%= data[i].time  %>
+                </td>
+                <td>
+                    <%= data[i].IP  %>
+                </td>
+                <td>
+                    <%= data[i].ID %>
+                </td>
+
+            </tr>
+            <% } %>
+    </table>
+<script src="//localhost:80/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost:80');
+</script>
